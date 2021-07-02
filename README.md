@@ -11,9 +11,10 @@ Here you will find some advices and configurations to reduce iOS app size.
 - Find and remove unused code. You can use [Periphery](https://github.com/peripheryapp/periphery) for that.
 - Inspect your .ipa to find any duplicated or unexpected assets
     - First, make an archive an export the .ipa, if you don't know how to do it, check this question in [stackoverflow](https://stackoverflow.com/questions/5499125/how-to-create-ipa-file-using-xcode)
-    - Find the .ipa and change the .ipa extension to .zip. Unzip it
+    - Find the .ipa and change the extension to .zip, then unzip it
     - Inspect it.
     - Remove duplicate asstes from your assets catalog, or your bundles.
+    - Remove or exclude from Release files that don't contribute to the final version of the .ipa. For example README.md, JSON mockups, etc.
 
 # Build Settings
 ### Clang
