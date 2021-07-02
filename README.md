@@ -42,7 +42,7 @@ post_install do |installer|
         config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Osize'
         config.build_settings['ASSETCATALOG_COMPILER_OPTIMIZATION'] = 'space'
         config.build_settings['GCC_OPTIMIZATION_LEVEL'] = 'z'
-   	    config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
+        config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
       end
     end
   end
