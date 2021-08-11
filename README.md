@@ -48,7 +48,16 @@ post_install do |installer|
   end
 end
 ```
-- If you want to move to static libraries use `use_modular_headers` instead of `use_frameworks`
+- If you want to move to static libraries use `use_frameworks! :linkage => :static` instead of `use_frameworks`
+
+```ruby
+target 'YourTargertName' do
+  use_frameworks! :linkage => :static
+  # your pods
+end
+```
+
+- If you don't have at least CocoaPods 1.9.0, you will have to use `use_modular_headers!`
 ```ruby
 target 'YourTargertName' do
   use_modular_headers!
