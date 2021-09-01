@@ -14,10 +14,10 @@ Here you will find some advices and configurations to reduce iOS app size.
     - Find the .ipa and change the extension to .zip, then unzip it
     - Inspect it.
     - Remove duplicate asstes from your assets catalog, or your bundles.
-    - Remove or exclude from Release files that don't contribute to the final version of the .ipa. For example README.md, JSON mockups, etc.
+    - Remove or exclude from "Release" files that don't contribute to the final version of the .ipa. For example README.md, JSON mockups, etc.
 - If you have string files (eg Localizables), remove the comments. Thanks [uber-mahyar2](https://github.com/uber-mahyar2) for the advice.
 
-# Build Settings
+# Build Settings to optimize size
 ### Clang
 - Select your target > Build Setting > Apple Clang - Code generator > Optimization Level > Release > -Oz 
 
