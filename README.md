@@ -26,9 +26,10 @@ Here you will find some advices and configurations to reduce iOS app size.
 - Select your target > Build Setting > Swift Compiler - Code generator > Optimization Level > Release > -Osize 
 - Select your target > Build Setting > Swift Compiler - Code generator > Compilation Moode > Release > Whole Module
 
-### Assets
+### Others
 
 - Select your target > Build Setting > Asset Catalog Compiler - Options > Optimization > Release > space 
+- Select your target > Build Setting > Enable Testability > Release > No 
 
 # CocoaPods
 We should apply the above settings to all of our CocoaPods targets. Doing it manually will take forever, and they will be overwritten with every `pod install`
@@ -43,6 +44,7 @@ post_install do |installer|
         config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Osize'
         config.build_settings['ASSETCATALOG_COMPILER_OPTIMIZATION'] = 'space'
         config.build_settings['GCC_OPTIMIZATION_LEVEL'] = 'z'
+        config.build_settings['ENABLE_TESTABILITY'] = 'NO'
         config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
       end
     end
